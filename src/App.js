@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import CLOUDS from 'vanta/dist/vanta.clouds.min';
+import img1 from './images/img1.jpeg'; // Replace with your image paths
+import img2 from './images/img2.jpeg';
+import img3 from './images/img3.jpg';
+import img4 from './images/img4.jpg';
 
 function App() {
+  useEffect(() => {
+    CLOUDS({
+      el: '#vanta'
+    })
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='bg' id='vanta'>
+        <h1 id='title'>Christian Beau Lazear</h1>
+        <div className='image-container'>
+          <img src={img1} alt="img1" className="diamond-img" id="top" />
+          <img src={img2} alt="img2" className="diamond-img" id="right" />
+          <img src={img3} alt="img3" className="diamond-img" id="bottom" />
+          <img src={img4} alt="img4" className="diamond-img" id="left" />
+        </div>
+      </div>
     </div>
   );
 }
