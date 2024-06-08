@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
       <div className='bg' id='vanta'>
+        <h1 className='header'>Christian Beau Lazear</h1>
         <div className='image-container'>
-          <h1 className='header'>Christian Beau Lazear</h1>
           <img src={img1} alt="img1" className="diamond-img" id="top" />
           <img src={img2} alt="img2" className="diamond-img" id="right" />
           <img src={img3} alt="img3" className="diamond-img" id="bottom" />

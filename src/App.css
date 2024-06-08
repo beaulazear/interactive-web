@@ -54,8 +54,14 @@ html,
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding: 20px 20px; /* Adjust padding as needed */
-  z-index: 1000; /* Ensure the header appears on top of other content */
+  padding: 20px 20px;
+  /* Adjust padding as needed */
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  z-index: 1000;
+  /* Ensure the header appears on top of other content */
+  width: 100%;
+
 }
 
 /* Media Queries */
@@ -63,22 +69,104 @@ html,
   .image-container {
     flex-direction: column;
     margin-bottom: 50px;
+    margin-top: 110px;
   }
+
   .diamond-img {
     height: 130px;
     width: 130px;
   }
+
   .diamond-img:hover {
     transform: scale(1.1);
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   }
+
   .bg {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .header {
+    padding: 10px 20px;
+    /* Adjust padding for smaller screens */
+    margin-bottom: 30px;
+    /* Increase margin for smaller screens */
+  }
+}
+
+/* Landscape Mode Styles for Mobile Devices */
+@media only screen and (max-device-width: 768px) and (orientation: landscape) {
+  .image-container {
+    flex-direction: row;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .diamond-img {
+    height: 130px;
+    width: 130px;
+  }
+
+  .diamond-img:hover {
+    transform: scale(1.1);
+    width: 155px;
+    height: 155px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    padding: 20px 20px;
+    /* Adjust padding as needed */
+    margin-bottom: 20px;
+  }
+}
+
+/* Portrait Mode Styles (Fallback) */
+@media only screen and (max-device-width: 768px) and (orientation: portrait) {
+  .image-container {
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 110px;
+  }
+
+  .diamond-img {
+    height: 130px;
+    width: 130px;
+  }
+
+  .diamond-img:hover {
+    transform: scale(1.1);
+    width: 140px;
+    height: 140px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    padding: 10px 20px;
+    /* Adjust padding for smaller screens */
+    margin-bottom: 30px;
+    /* Increase margin for smaller screens */
   }
 }
