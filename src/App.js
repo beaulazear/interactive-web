@@ -13,7 +13,7 @@ function App() {
     })
   }, [])
 
-  const [headerName, setHeaderName] = useState('Christian Beau Lazear');
+  const [headerName, setHeaderName] = useState('Beau Lazear');
 
   const handleMouseEnter = (name) => {
     setHeaderName(name);
@@ -28,7 +28,7 @@ function App() {
   }
 
   const handleMouseLeave = () => {
-    setHeaderName('Christian Beau Lazear');
+    setHeaderName('Beau Lazear');
   }
 
   return (
