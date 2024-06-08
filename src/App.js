@@ -13,7 +13,6 @@ function App() {
     })
   }, [])
 
-  // State to manage header name
   const [headerName, setHeaderName] = useState('Christian Beau Lazear');
 
   const handleMouseEnter = (name) => {
@@ -37,42 +36,41 @@ function App() {
       <div className='bg' id='vanta'>
         <h1 className='header'>{headerName}</h1>
         <div className='image-container'>
-          {/* Images */}
           <img
             src={img1}
             alt="img1"
             className="diamond-img"
             id="top"
-            onMouseEnter={() => handleMouseEnter('Image 1')}
+            onMouseEnter={() => handleMouseEnter('About Me')}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick('Image 1')}
+            onClick={() => handleClick('About Me')}
           />
           <img
             src={img2}
             alt="img2"
             className="diamond-img"
             id="right"
-            onMouseEnter={() => handleMouseEnter('Image 2')}
+            onMouseEnter={() => handleMouseEnter('Animal Care')}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick('Image 2')}
+            onClick={() => handleClick('Animal Care')}
           />
           <img
             src={img3}
             alt="img3"
             className="diamond-img"
             id="bottom"
-            onMouseEnter={() => handleMouseEnter('Image 3')}
+            onMouseEnter={() => handleMouseEnter('Software Development')}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick('Image 3')}
+            onClick={() => handleClick('Software Development')}
           />
           <img
             src={img4}
             alt="img4"
             className="diamond-img"
             id="left"
-            onMouseEnter={() => handleMouseEnter('Image 4')}
+            onMouseEnter={() => handleMouseEnter('Resume')}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick('Image 4')}
+            onClick={() => handleClick('Resume')}
           />
         </div>
       </div>
