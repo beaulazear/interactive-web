@@ -1,20 +1,28 @@
 {
   "files": {
     "main.css": "/interactive-web/static/css/main.19aa2cb6.css",
-    "main.js": "/interactive-web/static/js/main.262364ae.js",
+    "main.js": "/interactive-web/static/js/main.9a65e4d6.js",
     "static/js/453.e03d107d.chunk.js": "/interactive-web/static/js/453.e03d107d.chunk.js",
+    "static/media/BeauAndRalph.JPG": "/interactive-web/static/media/BeauAndRalph.9b8ecdd39db9b85bd93a.JPG",
+    "static/media/PetSitGif3.gif": "/interactive-web/static/media/PetSitGif3.a8e0fbe8565d719343fa.gif",
     "static/media/img3.jpg": "/interactive-web/static/media/img3.73c154fd956cd841939d.jpg",
+    "static/media/RiverWithBrick.jpeg": "/interactive-web/static/media/RiverWithBrick.47dc90bb53d489ab7d7e.jpeg",
+    "static/media/WorkoutGif.gif": "/interactive-web/static/media/WorkoutGif.5387b690cf0eb31a5ab0.gif",
+    "static/media/JavaLookinCute.jpeg": "/interactive-web/static/media/JavaLookinCute.fd01dd7a6a13e9eb2cf9.jpeg",
+    "static/media/MooseOnVerandah.jpeg": "/interactive-web/static/media/MooseOnVerandah.9470cd44cba681628cdc.jpeg",
     "static/media/img4.jpg": "/interactive-web/static/media/img4.a8a9786498f6e95dd295.jpg",
+    "static/media/Ruth.jpeg": "/interactive-web/static/media/Ruth.97731a0957123da32200.jpeg",
     "static/media/img2.jpg": "/interactive-web/static/media/img2.f64192625a404b0096c2.jpg",
     "static/media/CroppedBeau.jpeg": "/interactive-web/static/media/CroppedBeau.cadb71ca72a1f98a1c8f.jpeg",
     "static/media/img1.jpeg": "/interactive-web/static/media/img1.cadb71ca72a1f98a1c8f.jpeg",
+    "static/media/ResumePDF.pdf": "/interactive-web/static/media/ResumePDF.d5b0a1c6090180021cbf.pdf",
     "index.html": "/interactive-web/index.html",
     "main.19aa2cb6.css.map": "/interactive-web/static/css/main.19aa2cb6.css.map",
-    "main.262364ae.js.map": "/interactive-web/static/js/main.262364ae.js.map",
+    "main.9a65e4d6.js.map": "/interactive-web/static/js/main.9a65e4d6.js.map",
     "453.e03d107d.chunk.js.map": "/interactive-web/static/js/453.e03d107d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19aa2cb6.css",
-    "static/js/main.262364ae.js"
+    "static/js/main.9a65e4d6.js"
   ]
 }
