@@ -35,7 +35,6 @@ const CloseButton = styled.button`
   font-size: 1em;
   align-self: center;
   margin-bottom: 15px;
-  margin-top: 5px;
 
   &:hover {
     background-color: #0056b3;
@@ -77,7 +76,7 @@ const CombinedModal = ({ closeModal }) => {
         <ModalContainer>
             <ModalContent style={welcomeMessageStyles}>
                 <h2 style={{ fontSize: '30px', marginBottom: '20px', color: '#333' }}>Resume</h2>
-                <CloseButton onClick={closeModal}>Home</CloseButton>
+                <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
                 <br />
                 <a target="blank" href={ResumePDF}><button className="button2">PDF Version</button></a>
                 <br /><br />

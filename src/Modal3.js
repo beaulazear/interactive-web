@@ -80,7 +80,7 @@ const CloseButton = styled.button`
   cursor: pointer;
   font-size: 1em;
   align-self: center;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 5px;
 
   &:hover {
@@ -108,7 +108,8 @@ const h3Styles = {
 const pStyles = {
     color: '#777',
     fontSize: '16px',
-    textAlign: 'left'
+    textAlign: 'left',
+    margin: '5px'
 };
 
 const gifContainerStyle = {
@@ -159,10 +160,10 @@ const Programming = ({closeModal}) => {
         <div style={welcomeMessageStyles} ref={topElement}>
             <StyledIntroduction>
                 <Heading>Software Development</Heading>
+                <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
                 <Paragraph>
                     Welcome to my programming portfolio! I'm a web developer proficient with JavaScript, Ruby on Rails, React, HTML, and CSS. With a background in the animal care industry, I've been combining my love for animals with my coding skills to create projects for my dog walking business. I'm still exploring the world of web development, and my portfolio showcases my journey as I learn and grow. Take a look at my projects to visualize my progress.
                 </Paragraph>
-                <CloseButton onClick={closeModal}>Home</CloseButton>
             </StyledIntroduction>
             <h2 style={headingStyles}>Projects</h2>
             <ServiceCard>

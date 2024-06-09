@@ -26,7 +26,15 @@ function App() {
         el: '#vanta',
       });
     }
+    // Change header after 5 seconds
+    const headerTimeout = setTimeout(() => {
+      setHeaderName('Click an icon!');
+    }, 5000);
+
+    // Clear timeout on component unmount or when displayHome changes
+    return () => clearTimeout(headerTimeout);
   }, [displayHome]);
+
 
   const handleMouseEnter = (name, img) => {
     setHeaderName(name);

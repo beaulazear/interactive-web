@@ -61,7 +61,7 @@ const CloseButton = styled.button`
   cursor: pointer;
   font-size: 1em;
   align-self: center;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 5px;
 
   &:hover {
@@ -179,10 +179,10 @@ const AnimalCareInfo = ({closeModal}) => {
         <div style={welcomeMessageStyles} ref={topElement}>
             <StyledIntroduction>
                 <Heading>Animal Care</Heading>
+                <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
                 <Paragraph>
                     Hello! I am an animal caretaker with over eight years of professional caretaking experience. Experience includes zookeeping (Prospect Park Zoo, Wildlife Conservation Society), veterinary assisting, rescue rehabilitation (ASPCA), general pet care & enrichment. You can find my offered services, pricing, & client testimonials below.
                 </Paragraph>
-                <CloseButton onClick={closeModal}>Home</CloseButton>
             </StyledIntroduction>
             <h2 style={headingStyles}>Services and Pricing</h2>
             <StyledContainer>

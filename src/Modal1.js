@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CroppedBeau from './images/CroppedBeau.jpeg';
+import BeauAndRu from './images/BeauAndRu.JPG';
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -16,7 +17,7 @@ const ModalWrapper = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   max-width: 600px;
@@ -37,9 +38,14 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 const StyledIntroduction = styled.div`
@@ -92,21 +98,21 @@ function Modal1({ closeModal }) {
     <ModalWrapper>
       <ModalContent>
         <ImageWrapper>
-          <Image src={CroppedBeau} alt="Beau with a dog named Ru" />
+          <Image src={BeauAndRu} alt="Beau with a dog named Ru" />
         </ImageWrapper>
         <StyledIntroduction>
-          <SubHeading>About Me</SubHeading>
+          <SubHeading>Meet Beau</SubHeading>
           <Paragraph>
-            Hi, I'm Beau! I am based in Brooklyn NYC. I've had an eventful professional life involving multiple direct animal care positions, administrative & hospitality roles (within plant-based / cruelty-free establishments), and more. I've grown within these roles, and completed several educational programs / projects throughout my experience. I am currently maintaining my own business - providing exceptional animal care to clients across Brooklyn NYC. I am self-taught in basic computer programming, and I am a graduate from the Flatiron School's software development program. I also have my AWS Cloud Practitioner certification. I am proficient in HTML, Javascript, React, CSS, Ruby & Rails, and more as I continue to learn.
+            Hey there! I'm Beau, your friendly neighborhood animal enthusiast based in Brooklyn, NYC. I've got a knack for taking care of our furry friends and a passion for coding!
           </Paragraph>
         </StyledIntroduction>
         <StyledIntroduction>
-          <SubHeading>What can I do for you?</SubHeading>
+          <SubHeading>What I Do</SubHeading>
           <Paragraph>
-            I am available Monday-Friday, between 10 am and 5 pm, for animal care appointments. My service area is Carroll Gardens, Cobble Hill, Gowanus, and Brooklyn Heights. Weekend dog walks, evening/early morning walks, overnight pet sitting, and more available upon special request! I help connect clients with other independent contractors for services I cannot complete (due to location, schedule, pet's needs, etc...). I am available for freelance computer programming work. I can help with your personal websites, application ideas, etc... Competent with Javascript, React, HTML, CSS, Ruby, and more.
+            I offer top-notch animal care services throughout Brooklyn, Monday to Friday, 10 am to 5 pm. From dog walking to pet sitting, I've got your furry pals covered. Need help with web development? I've got coding skills too!
           </Paragraph>
         </StyledIntroduction>
-        <CloseButton onClick={closeModal}>Home</CloseButton>
+        <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
       </ModalContent>
     </ModalWrapper>
   );
