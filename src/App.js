@@ -11,7 +11,7 @@ import Modal3 from './Modal3';
 import Modal4 from './Modal4';
 
 function App() {
-  const [headerName, setHeaderName] = useState('Christian Beau Lazear');
+  const [headerName, setHeaderName] = useState('Beau Lazear');
   const [isModal1Open, setIsModal1Open] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
   const [isModal3Open, setIsModal3Open] = useState(false);
@@ -26,13 +26,7 @@ function App() {
         el: '#vanta',
       });
     }
-    // Change header after 5 seconds
-    const headerTimeout = setTimeout(() => {
-      setHeaderName('Click an icon!');
-    }, 5000);
 
-    // Clear timeout on component unmount or when displayHome changes
-    return () => clearTimeout(headerTimeout);
   }, [displayHome]);
 
 
@@ -42,7 +36,7 @@ function App() {
   };
 
   const handleMouseLeave = (img) => {
-    setHeaderName('Christian Beau Lazear');
+    setHeaderName('Beau Lazear');
     setHovered((prev) => ({ ...prev, [img]: false }));
   };
 
