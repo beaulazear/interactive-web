@@ -106,7 +106,7 @@ function Modal1({ closeModal }) {
             I am available Monday-Friday, between 10 am and 5 pm, for animal care appointments. My service area is Carroll Gardens, Cobble Hill, Gowanus, and Brooklyn Heights. Weekend dog walks, evening/early morning walks, overnight pet sitting, and more available upon special request! I help connect clients with other independent contractors for services I cannot complete (due to location, schedule, pet's needs, etc...). I am available for freelance computer programming work. I can help with your personal websites, application ideas, etc... Competent with Javascript, React, HTML, CSS, Ruby, and more.
           </Paragraph>
         </StyledIntroduction>
-        <CloseButton onClick={closeModal}>Go Back</CloseButton>
+        <CloseButton onClick={closeModal}>Home</CloseButton>
       </ModalContent>
     </ModalWrapper>
   );
