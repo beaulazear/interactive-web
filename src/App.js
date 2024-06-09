@@ -1,35 +1,48 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import TemporaryModal from './TemporaryModal';
 import CLOUDS from 'vanta/dist/vanta.clouds.min';
-import img1 from './images/img1.jpeg'; // Replace with your image paths
+import img1 from './images/img1.jpeg';
 import img2 from './images/img2.jpg';
 import img3 from './images/img3.jpg';
 import img4 from './images/img4.jpg';
+import Modal1 from './Modal1';
+import Modal2 from './Modal2';
+import Modal3 from './Modal3';
+import Modal4 from './Modal4';
 
 function App() {
   useEffect(() => {
     CLOUDS({
       el: '#vanta'
-    })
-  }, [])
+    });
+  }, []);
 
-  const [headerName, setHeaderName] = useState('Beau Lazear');
+  const [showTemporaryModal, setShowTemporaryModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null); // To store the selected image
+
+  const [headerName, setHeaderName] = useState('Christian Beau Lazear');
+  const [isModal1Open, setIsModal1Open] = useState(false);
+  const [isModal2Open, setIsModal2Open] = useState(false);
+  const [isModal3Open, setIsModal3Open] = useState(false);
+  const [isModal4Open, setIsModal4Open] = useState(false);
 
   const handleMouseEnter = (name) => {
     setHeaderName(name);
-  }
+  };
 
-  const handleClick = (name) => {
-    if (headerName === name) {
-      console.log('link click')
-    } else {
-      setHeaderName(name);
-    }
-  }
+  const handleClick = (modalSetter, image) => {
+    setSelectedImage(image); // Store the selected image
+    setShowTemporaryModal(true); // Show the temporary modal
+  };
 
   const handleMouseLeave = () => {
-    setHeaderName('Beau Lazear');
-  }
+    setHeaderName('Christian Beau Lazear');
+  };
+
+  const closeModal = (modalSetter) => {
+    modalSetter(false);
+  };
 
   return (
     <div className="App">
@@ -41,39 +54,57 @@ function App() {
             alt="img1"
             className="diamond-img"
             id="top"
-            onMouseEnter={() => handleMouseEnter('About Me')}
+            onMouseEnter={() => handleMouseEnter('aboutMe')}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick('About Me')}
+            onClick={() => handleClick(setIsModal1Open)}
           />
           <img
             src={img2}
             alt="img2"
             className="diamond-img"
             id="right"
-            onMouseEnter={() => handleMouseEnter('Animal Care')}
+            onMouseEnter={() => handleMouseEnter('animalCare')}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick('Animal Care')}
+            onClick={() => handleClick(setIsModal2Open)}
           />
           <img
             src={img3}
             alt="img3"
             className="diamond-img"
             id="bottom"
-            onMouseEnter={() => handleMouseEnter('Software Development')}
+            onMouseEnter={() => handleMouseEnter('webDev')}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick('Software Development')}
+            onClick={() => handleClick(setIsModal3Open)}
           />
           <img
             src={img4}
             alt="img4"
             className="diamond-img"
             id="left"
-            onMouseEnter={() => handleMouseEnter('Resume')}
+            onMouseEnter={() => handleMouseEnter('resume')}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick('Resume')}
+            onClick={() => handleClick(setIsModal4Open)}
           />
         </div>
       </div>
+      {isModal1Open && (
+        <Modal1 closeModal={() => closeModal(setIsModal1Open)} />
+      )}
+      {isModal2Open && (
+        <Modal2 closeModal={() => closeModal(setIsModal2Open)} />
+      )}
+      {isModal3Open && (
+        <Modal3 closeModal={() => closeModal(setIsModal3Open)} />
+      )}
+      {isModal4Open && (
+        <Modal4 closeModal={() => closeModal(setIsModal4Open)} />
+      )}
+      {showTemporaryModal && (
+        <TemporaryModal
+          image={selectedImage}
+          closeModal={() => setShowTemporaryModal(false)}
+        />
+      )}
     </div>
   );
 }

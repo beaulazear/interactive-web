@@ -17,13 +17,18 @@ html,
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  /* Align items to the top */
+  padding-top: 75px;
+  /* Adjust this to match the height of the header */
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  /* Remove any top margin */
 }
 
 .diamond-img {
@@ -33,7 +38,6 @@ html,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s;
   margin: 10px;
-  /* Add margin to create space between images */
 }
 
 .diamond-img:hover {
@@ -49,25 +53,23 @@ html,
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   text-align: center;
-  font-size: 40px;
-  top: 0;
+  font-size: 32px;
+  line-height: 50px;
+  top: 25px;
   left: 50%;
   transform: translateX(-50%);
   padding: 20px 20px;
   z-index: 1000;
-  /* Ensure the header appears on top of other content */
   width: 100%;
-  font-family: monospace;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Media Queries */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-device-width: 768px) and (orientation: portrait) {
   .image-container {
     flex-direction: column;
-    margin-bottom: 50px;
-    margin-top: 100px;
   }
 
   .diamond-img {
@@ -83,27 +85,18 @@ html,
   }
 
   .bg {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 55px;
+    /* Adjust this to match the height of the header for smaller devices */
   }
 
   .header {
-    padding: 10px 20px;
-    /* Adjust padding for smaller screens */
-    margin-bottom: 30px;
-    /* Increase margin for smaller screens */
+    top: 10px;
   }
 }
 
-/* Landscape Mode Styles for Mobile Devices */
 @media only screen and (max-device-width: 768px) and (orientation: landscape) {
   .image-container {
     flex-direction: row;
-    margin-bottom: 0;
-    margin-top: 0;
   }
 
   .diamond-img {
@@ -119,52 +112,59 @@ html,
   }
 
   .bg {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 75px;
+    /* Adjust this to match the height of the header */
   }
 
   .header {
     padding: 20px 20px;
-    /* Adjust padding as needed */
-    margin-bottom: 20px;
   }
 }
 
-/* Portrait Mode Styles (Fallback) */
-@media only screen and (max-device-width: 768px) and (orientation: portrait) {
-  .image-container {
-    flex-direction: column;
-    margin-bottom: 50px;
-    margin-top: 110px;
+@media only screen and (max-device-width: 500px) and (orientation: portrait) {
+  .header {
+    top: 3px;
+    font-size: 28px;
   }
 
   .diamond-img {
-    height: 130px;
-    width: 130px;
+    height: 120px;
+    width: 120px;
   }
 
   .diamond-img:hover {
     transform: scale(1.1);
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   }
+}
 
-  .bg {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  /* Full white background to cover the entire screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* Ensure it covers all other elements */
+}
 
-  .header {
-    padding: 10px 20px;
-    /* Adjust padding for smaller screens */
-    margin-bottom: 30px;
-    /* Increase margin for smaller screens */
-  }
+.modal-content {
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
