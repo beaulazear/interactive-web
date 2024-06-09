@@ -26,9 +26,7 @@ function App() {
         el: '#vanta',
       });
     }
-
   }, [displayHome]);
-
 
   const handleMouseEnter = (name, img) => {
     setHeaderName(name);
@@ -54,49 +52,25 @@ function App() {
     }
   };
 
-  function openModal1() {
-    if (hovered.img1) {
-      setDisplayHome(false);
-      setIsModal1Open(true);
-    } else {
-      handleMouseEnter('aboutMe', 'img1');
-      setClickState((prev) => ({ ...prev, img1: true }));
-      setTimeout(() => setClickState((prev) => ({ ...prev, img1: false })), 1000);
-    }
-  }
+  const openModal1 = () => {
+    setDisplayHome(false);
+    setIsModal1Open(true);
+  };
 
-  function openModal2() {
-    if (hovered.img2) {
-      setDisplayHome(false);
-      setIsModal2Open(true);
-    } else {
-      handleMouseEnter('animalCare', 'img2');
-      setClickState((prev) => ({ ...prev, img2: true }));
-      setTimeout(() => setClickState((prev) => ({ ...prev, img2: false })), 1000);
-    }
-  }
+  const openModal2 = () => {
+    setDisplayHome(false);
+    setIsModal2Open(true);
+  };
 
-  function openModal3() {
-    if (hovered.img3) {
-      setDisplayHome(false);
-      setIsModal3Open(true);
-    } else {
-      handleMouseEnter('webDev', 'img3');
-      setClickState((prev) => ({ ...prev, img3: true }));
-      setTimeout(() => setClickState((prev) => ({ ...prev, img3: false })), 1000);
-    }
-  }
+  const openModal3 = () => {
+    setDisplayHome(false);
+    setIsModal3Open(true);
+  };
 
-  function openModal4() {
-    if (hovered.img4) {
-      setDisplayHome(false);
-      setIsModal4Open(true);
-    } else {
-      handleMouseEnter('resume', 'img4');
-      setClickState((prev) => ({ ...prev, img4: true }));
-      setTimeout(() => setClickState((prev) => ({ ...prev, img4: false })), 1000);
-    }
-  }
+  const openModal4 = () => {
+    setDisplayHome(false);
+    setIsModal4Open(true);
+  };
 
   const closeModal = () => {
     setIsModal1Open(false);
@@ -104,7 +78,6 @@ function App() {
     setIsModal3Open(false);
     setIsModal4Open(false);
     setDisplayHome(true);
-    handleMouseLeave()
     setHovered({ img1: false, img2: false, img3: false, img4: false });
   };
 
@@ -121,7 +94,7 @@ function App() {
               id="top"
               onMouseEnter={() => handleMouseEnter('aboutMe', 'img1')}
               onMouseLeave={() => handleMouseLeave('img1')}
-              onClick={() => openModal1()}
+              onClick={() => handleImageClick('img1', 'aboutMe', openModal1)}
             />
             <img
               src={img2}
@@ -130,7 +103,7 @@ function App() {
               id="right"
               onMouseEnter={() => handleMouseEnter('animalCare', 'img2')}
               onMouseLeave={() => handleMouseLeave('img2')}
-              onClick={() => openModal2()}
+              onClick={() => handleImageClick('img2', 'animalCare', openModal2)}
             />
             <img
               src={img3}
@@ -139,7 +112,7 @@ function App() {
               id="bottom"
               onMouseEnter={() => handleMouseEnter('webDev', 'img3')}
               onMouseLeave={() => handleMouseLeave('img3')}
-              onClick={() => openModal3()}
+              onClick={() => handleImageClick('img3', 'webDev', openModal3)}
             />
             <img
               src={img4}
@@ -148,7 +121,7 @@ function App() {
               id="left"
               onMouseEnter={() => handleMouseEnter('resume', 'img4')}
               onMouseLeave={() => handleMouseLeave('img4')}
-              onClick={() => openModal4()}
+              onClick={() => handleImageClick('img4', 'resume', openModal4)}
             />
           </div>
         </div>
