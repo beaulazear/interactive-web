@@ -48,38 +48,32 @@ function App() {
 
   const handleImageClick = (img, name, openModal) => {
     if (isTouchDevice) {
-      // If it's a touch device, simulate hover behavior on the first touch
       if (!clickState[img]) {
+        // Simulate hover behavior on the first tap
         handleMouseEnter(name, img);
         setClickState((prev) => ({ ...prev, [img]: true }));
 
-        // Set a timeout to handle the hover state
-        const timeoutId = setTimeout(() => {
+        // Set a timeout to reset the click state, hover state, and header after a short delay
+        setTimeout(() => {
           setClickState((prev) => ({ ...prev, [img]: false }));
-          handleMouseLeave(img);
-        }, 4000); // Adjust the delay as needed
-
-        // Store the timeout ID in a variable
-        const timeoutMap = { [img]: timeoutId };
-
-        // Clear the timeout if something else is clicked before it expires
-        const handleClick = () => {
-          clearTimeout(timeoutMap[img]);
-          // Perform the action on the second touch
-          openModal();
-        };
-
-        // Attach the click event listener
-        document.addEventListener('click', handleClick, { once: true });
+          handleMouseLeave(img); // Reset hover state
+          setHeaderName('beauLazear'); // Reset the header
+        }, 5000); // Adjust the delay as needed
       } else {
-        // Perform the action on the second touch
+        // If clickState is already true, perform the action immediately on double-tap
         openModal();
+        setClickState((prev) => ({ ...prev, [img]: false })); // Reset clickState
       }
     } else {
       // For non-touch devices, directly open the modal
       openModal();
     }
   };
+
+
+
+
+
 
 
 
