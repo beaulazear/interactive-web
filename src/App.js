@@ -52,13 +52,6 @@ function App() {
         // Simulate hover behavior on the first tap
         handleMouseEnter(name, img);
         setClickState((prev) => ({ ...prev, [img]: true }));
-
-        // Set a timeout to reset the click state, hover state, and header after a short delay
-        setTimeout(() => {
-          setClickState((prev) => ({ ...prev, [img]: false }));
-          handleMouseLeave(img); // Reset hover state
-          setHeaderName('beauLazear'); // Reset the header
-        }, 5000); // Adjust the delay as needed
       } else {
         // If clickState is already true, perform the action immediately on double-tap
         openModal();
@@ -69,14 +62,6 @@ function App() {
       openModal();
     }
   };
-
-
-
-
-
-
-
-
 
   const openModal1 = () => {
     setDisplayHome(false);
