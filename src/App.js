@@ -53,11 +53,24 @@ function App() {
         handleMouseEnter(name, img);
         setClickState((prev) => ({ ...prev, [img]: true }));
 
-        // Reset the click state after a delay to allow for the second touch
-        setTimeout(() => {
+        // Set a timeout to handle the hover state
+        const timeoutId = setTimeout(() => {
           setClickState((prev) => ({ ...prev, [img]: false }));
-          handleMouseLeave(img)
+          handleMouseLeave(img);
         }, 5000); // Adjust the delay as needed
+
+        // Store the timeout ID in a variable
+        const timeoutMap = { [img]: timeoutId };
+
+        // Clear the timeout if something else is clicked before it expires
+        const handleClick = () => {
+          clearTimeout(timeoutMap[img]);
+          // Perform the action on the second touch
+          openModal();
+        };
+
+        // Attach the click event listener
+        document.addEventListener('click', handleClick, { once: true });
       } else {
         // Perform the action on the second touch
         openModal();
@@ -67,6 +80,7 @@ function App() {
       openModal();
     }
   };
+
 
 
 
