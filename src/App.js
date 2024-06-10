@@ -117,6 +117,15 @@ function App() {
               onClick={() => handleImageClick('img1', 'aboutMe', openModal1)}
             />
             <img
+              src={img4}
+              alt="img4"
+              className="diamond-img"
+              id="left"
+              onMouseEnter={() => handleMouseEnter('resume', 'img4')}
+              onMouseLeave={() => handleMouseLeave('img4')}
+              onClick={() => handleImageClick('img4', 'resume', openModal4)}
+            />
+            <img
               src={img2}
               alt="img2"
               className="diamond-img"
@@ -133,15 +142,6 @@ function App() {
               onMouseEnter={() => handleMouseEnter('webDev', 'img3')}
               onMouseLeave={() => handleMouseLeave('img3')}
               onClick={() => handleImageClick('img3', 'webDev', openModal3)}
-            />
-            <img
-              src={img4}
-              alt="img4"
-              className="diamond-img"
-              id="left"
-              onMouseEnter={() => handleMouseEnter('resume', 'img4')}
-              onMouseLeave={() => handleMouseLeave('img4')}
-              onClick={() => handleImageClick('img4', 'resume', openModal4)}
             />
             <img
               src={Github}

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { NavLink } from "react-router-dom";
 import styled from 'styled-components';
 import Ruth from "./images/Ruth.jpeg"
 import BeauAndRalph from "./images/BeauAndRalph.JPG"
@@ -124,8 +123,9 @@ const h3Styles = {
 
 const pStyles = {
     color: '#777',
-    fontSize: '16px',
-    textAlign: 'left'
+    fontSize: '18px',
+    textAlign: 'left',
+    padding: '10px'
 };
 
 const StyledIntroduction = styled.div`
@@ -141,6 +141,7 @@ const StyledIntroduction = styled.div`
 const Heading = styled.h2`
   font-size: 2em;
   margin-bottom: 10px;
+  margin-top: 15px;
   color: #333;
 
   @media (max-width: 800px) {

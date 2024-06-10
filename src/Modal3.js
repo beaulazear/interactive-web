@@ -29,6 +29,7 @@ const StyledIntroduction = styled.div`
 const Heading = styled.h2`
   font-size: 2em;
   margin-bottom: 10px;
+  margin-top: 15px;
   color: #333;
 
   @media (max-width: 800px) {
@@ -107,9 +108,10 @@ const h3Styles = {
 
 const pStyles = {
     color: '#777',
-    fontSize: '16px',
+    fontSize: '18px',
     textAlign: 'left',
-    margin: '5px'
+    margin: '5px',
+    padding: '10px'
 };
 
 const gifContainerStyle = {
@@ -130,7 +132,7 @@ const gifImageStyle = {
 
 const modernButtonStyle = {
     display: 'inline-block',
-    width: '200px',
+    width: '250px',
     padding: '12px 20px',
     margin: '10px',
     border: 'none',
