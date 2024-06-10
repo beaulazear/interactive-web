@@ -56,7 +56,8 @@ function App() {
         // Reset the click state after a delay to allow for the second touch
         setTimeout(() => {
           setClickState((prev) => ({ ...prev, [img]: false }));
-        }, 500); // Adjust the delay as needed
+          handleMouseLeave(img)
+        }, 5000); // Adjust the delay as needed
       } else {
         // Perform the action on the second touch
         openModal();
