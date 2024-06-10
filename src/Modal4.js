@@ -47,21 +47,21 @@ const CloseButton = styled.button`
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 28px;
-  margin-top: 30px;
+  font-size: 24px;
+  margin-top: 20px;
   margin-bottom: 15px;
   color: #333;
 `;
 
 const JobTitle = styled.h2`
-  font-size: 24px;
-  margin-top: 20px;
+  font-size: 20px;
+  margin-top: 15px;
   margin-bottom: 10px;
   color: #444;
 `;
 
 const JobDescription = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   color: #666;
 `;
@@ -76,53 +76,53 @@ const StyledLink = styled.a`
 `;
 
 const CombinedModal = ({ closeModal }) => {
-    return (
-        <ModalContainer>
-            <ModalContent>
-                <h1 style={{ fontSize: '36px', marginBottom: '20px', color: '#333' }}>Beau Lazear</h1>
-                <CloseButton onClick={closeModal}>Close</CloseButton>
-                <br />
-                <StyledLink target="_blank" href={ResumePDF}>Download PDF Version</StyledLink>
-                <br /><br />
-                <h2 style={{ fontSize: '24px', color: '#333' }}>Animal Care & Software Development Professional</h2>
-                <h1 style={{ fontSize: '28px', marginTop: '30px', marginBottom: '15px', color: '#333' }}>Experience</h1>
-                <JobTitle>Freelance Animal Care, Self-Employed (2019-Present)</JobTitle>
-                <JobDescription>
-                    - Developed and maintained an informational website using HTML, CSS, and JavaScript<br />
-                    - Expanded client base through effective networking and social media marketing<br />
-                    - Managed scheduling, invoicing, and client communications<br />
-                </JobDescription>
-                <JobTitle>Veterinary Assistant, ASPCA-ARC (Apr. 2019-Nov. 2019)</JobTitle>
-                <JobDescription>
-                    - Provided daily animal husbandry and medical support<br />
-                    - Assisted veterinarians during procedures and managed medical paperwork<br />
-                    - Promoted to lead vet assistant for proactive leadership during high employee turnover<br />
-                </JobDescription>
-                <JobTitle>Zookeeper, Wildlife Conservation Society - Prospect Park Zoo (Sept. 2017-Feb. 2019)</JobTitle>
-                <JobDescription>
-                    - Completed internships and advanced to full-time zookeeper role<br />
-                    - Executed animal husbandry, enrichment activities, and data recording<br />
-                    - Collaborated with team members to optimize workflow and efficiency<br />
-                </JobDescription>
-                <br />
-                <h1 style={{ fontSize: '28px', marginTop: '30px', marginBottom: '15px', color: '#333' }}>Skills</h1>
-                <JobDescription>
-                    - Proficient in HTML, CSS, JavaScript, React, and Ruby on Rails<br />
-                    - Strong communication and interpersonal skills<br />
-                    - Detail-oriented with excellent organizational abilities<br />
-                    - Adaptable and quick learner<br />
-                    - Passionate about environmental and social causes<br />
-                </JobDescription>
-                <br />
-                <h1 style={{ fontSize: '28px', marginTop: '30px', marginBottom: '15px', color: '#333' }}>Education</h1>
-                <JobDescription>
-                    - Flatiron School Software Development Program, 2023 Graduate<br />
-                    - Real Estate License, New York Real Estate Institute<br />
-                    - Continuing Education Credits, Prospect Park Zoo (Wildlife Conservation Society)<br />
-                </JobDescription>
-            </ModalContent>
-        </ModalContainer>
-    )
+  return (
+    <ModalContainer>
+      <ModalContent>
+        <h1 style={{ fontSize: '28px', marginBottom: '20px', color: '#333' }}>Beau Lazear</h1>
+        <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
+        <br />
+        <StyledLink target="_blank" href={ResumePDF}>Download PDF Version</StyledLink>
+        <br /><br />
+        <h2 style={{ fontSize: '24px', color: '#333' }}>Animal Care & Software Development Professional</h2>
+        <SectionTitle>Experience</SectionTitle>
+        <JobTitle>Freelance Animal Care, Self-Employed (2019-Present)</JobTitle>
+        <JobDescription>
+          - Developed and maintained an informational website using HTML, CSS, and JavaScript<br />
+          - Expanded client base through effective networking and social media marketing<br />
+          - Managed scheduling, invoicing, and client communications<br />
+        </JobDescription>
+        <JobTitle>Veterinary Assistant, ASPCA-ARC (Apr. 2019-Nov. 2019)</JobTitle>
+        <JobDescription>
+          - Provided daily animal husbandry and medical support<br />
+          - Assisted veterinarians during procedures and managed medical paperwork<br />
+          - Promoted to lead vet assistant for proactive leadership during high employee turnover<br />
+        </JobDescription>
+        <JobTitle>Zookeeper, Wildlife Conservation Society - Prospect Park Zoo (Sept. 2017-Feb. 2019)</JobTitle>
+        <JobDescription>
+          - Completed internships and advanced to full-time zookeeper role<br />
+          - Executed animal husbandry, enrichment activities, and data recording<br />
+          - Collaborated with team members to optimize workflow and efficiency<br />
+        </JobDescription>
+        <br />
+        <SectionTitle>Skills</SectionTitle>
+        <JobDescription>
+          - Proficient in HTML, CSS, JavaScript, React, and Ruby on Rails<br />
+          - Strong communication and interpersonal skills<br />
+          - Detail-oriented with excellent organizational abilities<br />
+          - Adaptable and quick learner<br />
+          - Passionate about environmental and social causes<br />
+        </JobDescription>
+        <br />
+        <SectionTitle>Education</SectionTitle>
+        <JobDescription>
+          - Flatiron School Software Development Program, 2023 Graduate<br />
+          - Real Estate License, New York Real Estate Institute<br />
+          - Continuing Education Credits, Prospect Park Zoo (Wildlife Conservation Society)<br />
+        </JobDescription>
+      </ModalContent>
+    </ModalContainer>
+  )
 }
 
 export default CombinedModal;

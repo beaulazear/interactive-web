@@ -134,7 +134,7 @@ function App() {
               alt="img2"
               className="diamond-img"
               id="right"
-              onMouseEnter={() => handleMouseEnter('animalCare', 'img2')}
+              onMouseEnter={() => handleMouseEnter('animalCare ', 'img2')}
               onMouseLeave={() => handleMouseLeave('img2')}
               onClick={() => handleImageClick('img2', 'animalCare', openModal2)}
             />
@@ -159,7 +159,7 @@ function App() {
               src={Linkedin}
               alt="linkedin"
               className="diamond-img"
-              onMouseEnter={() => handleMouseEnter('linkedIn', 'linkedin')}
+              onMouseEnter={() => handleMouseEnter('🫱🏼‍🫲🏿 linkedIn 🫱🏼‍🫲🏿', 'linkedin')}
               onMouseLeave={() => handleMouseLeave('linkedin')}
               onClick={() => handleImageClick('linkedin', 'linkedIn', openLinkedin)}
             />

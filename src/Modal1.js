@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import BeauAndRu from './images/BeauAndRu.JPG';
+import CroppedBeau from './images/CroppedBeau.jpeg';
+import BeauReykaMangoRu from './images/BeauReykaMangoRu.jpeg';
+import BeauWithHornbill from './images/BeauAndHornbill.jpeg';
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -49,16 +52,14 @@ const Image = styled.img`
 
 const StyledIntroduction = styled.div`
   margin-top: 30px;
-
-  &:first-child {
-    margin-top: 0;
-  }
+  text-align: center; /* Center align text */
 `;
 
 const SubHeading = styled.h3`
   margin-bottom: 20px; /* Extra space for a grand entrance */
   color: #333;
-  font-size: 1.8em; /* Bigger font for more impact */
+  font-size: 2em; /* Bigger font for more impact */
+  text-align: center; /* Center align text */
 
   @media (max-width: 768px) {
     font-size: 1.5em;
@@ -79,8 +80,8 @@ const CloseButton = styled.button`
   border-radius: 10px; /* Rounded corners for a friendly touch */
   cursor: pointer;
   font-size: 1.2em; /* Bigger button for easier clicking */
-  margin-top: 30px;
   align-self: center;
+  width: 100%;
 
   &:hover {
     background-color: #ff4d4d; /* Darker red on hover for a pop effect */
@@ -97,19 +98,34 @@ function Modal1({ closeModal }) {
     <ModalWrapper>
       <ModalContent>
         <ImageWrapper>
-          <Image src={BeauAndRu} alt="Beau with a dog named Ru" />
+          <Image src={BeauWithHornbill} alt="Beau with a hornbill" />
         </ImageWrapper>
-        <StyledIntroduction>
-          <SubHeading>🐾 Meet Beau 🐾</SubHeading>
-          <Paragraph>
-            Hi, I'm Beau, an animal lover based in Brooklyn, NYC. I'm passionate about providing excellent care for pets and equally enthusiastic about coding.          </Paragraph>
-        </StyledIntroduction>
         <StyledIntroduction>
           <SubHeading>🌟 What I Do 🌟</SubHeading>
           <Paragraph>
-            I offer top-notch animal care services throughout Brooklyn, Monday to Friday, 10 am to 5 pm. From dog walking to pet sitting, I've got your furry pals covered. Need help with web development? I've got coding skills too!
+            Hi, I'm Beau, an animal lover based in Brooklyn, NYC. I'm passionate about providing excellent care for pets and equally enthusiastic about coding. I have worked as a zookeeper, in animal rescues, vet clinics and more. I was initially self taught in basic programming, then I completed a coding bootcamp at the Flatiron school and obtained an AWS certification.
           </Paragraph>
         </StyledIntroduction>
+        <ImageWrapper>
+          <Image src={CroppedBeau} alt="headshot of Beau" />
+        </ImageWrapper>
+        <StyledIntroduction>
+          <SubHeading>🖥️ Software Development 🖥️</SubHeading>
+          <Paragraph>
+            Hello! 👋 I'm a self-taught developer who completed a bootcamp and holds an AWS certification. Proficient in JavaScript, React, Ruby on Rails, HTML, CSS, and more. Always open to new projects and continuously expanding my skills. Let's collaborate on something great!          </Paragraph>
+        </StyledIntroduction>
+        <ImageWrapper>
+          <Image src={BeauAndRu} alt="Beau with a dog named Ru" />
+          {/* <Image src={BeauReykaMangoRu} alt="Beau with a mango cocktail" /> */}
+        </ImageWrapper>
+        <StyledIntroduction>
+          <SubHeading>🐈 Animal Care 🐕</SubHeading>
+          <Paragraph>
+            Delivering top-notch animal care services in Cobble Hill, Gowanus, Carroll Gardens, and surrounding areas for weekday walks. As an insured professional with a background as a zookeeper and experience from ASPCA and vet clinics, I offer pet sitting services across the city. Your furry pals are in caring and experienced hands, whether it's a walk or pet sitting!          </Paragraph>
+        </StyledIntroduction>
+        <ImageWrapper>
+          <Image src={BeauReykaMangoRu} alt="Beau with a mango cocktail" />
+        </ImageWrapper>
         <CloseButton onClick={closeModal}>Take Me Home 🏡</CloseButton>
       </ModalContent>
     </ModalWrapper>
