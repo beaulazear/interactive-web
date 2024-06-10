@@ -47,6 +47,14 @@ html,
   /* Move transition properties here */
 }
 
+@media only screen and (min-width: 1000px) {
+  .image-container {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 75px;
+  }
+}
+
 .header {
   position: absolute;
   text-align: center;
