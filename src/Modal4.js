@@ -35,6 +35,7 @@ const CloseButton = styled.button`
   font-size: 1.2em;
   align-self: center;
   margin-bottom: 20px;
+  width: 100%;
 
   &:hover {
     background-color: #0056b3;
@@ -79,7 +80,7 @@ const CombinedModal = ({ closeModal }) => {
   return (
     <ModalContainer>
       <ModalContent>
-        <h1 style={{ fontSize: '28px', marginBottom: '20px', color: '#333' }}>Beau Lazear</h1>
+        <h1 style={{ fontSize: '25px', marginBottom: '20px', color: '#333' }}>Christian "Beau" Lazear</h1>
         <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
         <br />
         <StyledLink target="_blank" href={ResumePDF}>Download PDF Version</StyledLink>
@@ -89,6 +90,7 @@ const CombinedModal = ({ closeModal }) => {
         <JobTitle>Freelance Animal Care, Self-Employed (2019-Present)</JobTitle>
         <JobDescription>
           - Developed and maintained an informational website using HTML, CSS, and JavaScript<br />
+          - Developed and maintained custom application for freelance animal care, including scheduling, invoicing, pet data management, and finance tracking.<br />
           - Expanded client base through effective networking and social media marketing<br />
           - Managed scheduling, invoicing, and client communications<br />
         </JobDescription>

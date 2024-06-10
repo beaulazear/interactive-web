@@ -98,6 +98,7 @@ function Modal1({ closeModal }) {
     <ModalWrapper>
       <ModalContent>
         <ImageWrapper>
+          <SubHeading>Christian "Beau" Lazear</SubHeading>
           <Image src={BeauWithHornbill} alt="Beau with a hornbill" />
         </ImageWrapper>
         <StyledIntroduction>

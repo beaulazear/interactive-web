@@ -61,10 +61,12 @@ html,
   padding: 20px;
   z-index: 1000;
   width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
+  /* Use a professional yet unique font */
   color: black;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  animation: bounce 1s ease infinite alternate;
+  animation: bounce 2s ease infinite alternate;
+  /* Slow down the animation */
 }
 
 @keyframes bounce {

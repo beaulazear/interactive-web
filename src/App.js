@@ -159,7 +159,7 @@ function App() {
               src={Linkedin}
               alt="linkedin"
               className="diamond-img"
-              onMouseEnter={() => handleMouseEnter('🫱🏼‍🫲🏿 linkedIn 🫱🏼‍🫲🏿', 'linkedin')}
+              onMouseEnter={() => handleMouseEnter('linkedIn', 'linkedin')}
               onMouseLeave={() => handleMouseLeave('linkedin')}
               onClick={() => handleImageClick('linkedin', 'linkedIn', openLinkedin)}
             />
