@@ -48,24 +48,25 @@ function App() {
 
   const handleImageClick = (img, name, openModal) => {
     if (isTouchDevice) {
-      openModal();
-    } else {
-      // Handle click logic for non-touch devices
-      // This part remains the same as your existing logic
-      // You might adjust it if needed
-      if (hovered[img] && clickState[img]) {
-        openModal();
-      } else {
+      // If it's a touch device, simulate hover behavior on the first touch
+      if (!clickState[img]) {
         handleMouseEnter(name, img);
         setClickState((prev) => ({ ...prev, [img]: true }));
 
-        // Reset the click state after a delay to allow for double clicks
+        // Reset the click state after a delay to allow for the second touch
         setTimeout(() => {
           setClickState((prev) => ({ ...prev, [img]: false }));
-        }, 1000); // Adjust the delay as needed
+        }, 500); // Adjust the delay as needed
+      } else {
+        // Perform the action on the second touch
+        openModal();
       }
+    } else {
+      // For non-touch devices, directly open the modal
+      openModal();
     }
   };
+
 
 
   const openModal1 = () => {
