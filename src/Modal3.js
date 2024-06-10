@@ -162,7 +162,7 @@ const Programming = ({closeModal}) => {
         <div style={welcomeMessageStyles} ref={topElement}>
             <StyledIntroduction>
                 <Heading>Software Development</Heading>
-                <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
+                <CloseButton onClick={closeModal}>Take Me Home 🏡</CloseButton>
                 <Paragraph>
                     Welcome to my programming portfolio! I'm a web developer proficient with JavaScript, Ruby on Rails, React, HTML, and CSS. With a background in the animal care industry, I've been combining my love for animals with my coding skills to create projects for my dog walking business. I'm still exploring the world of web development, and my portfolio showcases my journey as I learn and grow. Take a look at my projects to visualize my progress.
                 </Paragraph>
@@ -172,11 +172,6 @@ const Programming = ({closeModal}) => {
                 <h2 style={h2Styles}>Dog Walking Application</h2>
                 <h3 style={h3Styles}>React, Ruby on Rails, HTML, CSS</h3>
                 <p style={pStyles}>This full-stack application, built with Ruby on Rails and React, lets you manage and track your dog walking services. Utilizing AWS S3 for file storage, it's great for storing pet information, scheduling walks, and tracking finances.</p>
-                {/* <br />
-        <div style={gifContainerStyle}>
-          <img src={DogWalkGif} alt="gif of this project" style={gifImageStyle} />
-        </div>
-        <br /> */}
                 <a style={modernButtonStyle} target="_blank" href="https://youtu.be/vGsZPkvNa5Y">Video Walkthrough</a>
                 <br />
                 <a style={modernButtonStyle} target="_blank" href="https://dog-walking-app.onrender.com">Deployed Website Link</a>

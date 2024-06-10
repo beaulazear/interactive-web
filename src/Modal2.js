@@ -180,7 +180,7 @@ const AnimalCareInfo = ({closeModal}) => {
         <div style={welcomeMessageStyles} ref={topElement}>
             <StyledIntroduction>
                 <Heading>Animal Care</Heading>
-                <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
+                <CloseButton onClick={closeModal}>Take Me Home 🏡</CloseButton>
                 <Paragraph>
                     Hello! I am an animal caretaker with over eight years of professional caretaking experience. Experience includes zookeeping (Prospect Park Zoo, Wildlife Conservation Society), veterinary assisting, rescue rehabilitation (ASPCA), general pet care & enrichment. You can find my offered services, pricing, & client testimonials below.
                 </Paragraph>

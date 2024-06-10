@@ -80,17 +80,17 @@ const CombinedModal = ({ closeModal }) => {
   return (
     <ModalContainer>
       <ModalContent>
-        <h1 style={{ fontSize: '25px', marginBottom: '20px', color: '#333' }}>Christian "Beau" Lazear</h1>
-        <CloseButton onClick={closeModal}>Take Me Home</CloseButton>
+        <h1 style={{ fontSize: '25px', marginBottom: '20px', color: '#333', textAlign: 'center' }}>Christian "Beau" Lazear</h1>
+        <CloseButton onClick={closeModal}>Take Me Home 🏡</CloseButton>
         <br />
         <StyledLink target="_blank" href={ResumePDF}>Download PDF Version</StyledLink>
         <br /><br />
-        <h2 style={{ fontSize: '24px', color: '#333' }}>Animal Care & Software Development Professional</h2>
+        <h2 style={{ fontSize: '24px', color: '#333' }}>Animal Care Professional & Software Developer</h2>
         <SectionTitle>Experience</SectionTitle>
         <JobTitle>Freelance Animal Care, Self-Employed (2019-Present)</JobTitle>
         <JobDescription>
-          - Developed and maintained an informational website using HTML, CSS, and JavaScript<br />
-          - Developed and maintained custom application for freelance animal care, including scheduling, invoicing, pet data management, and finance tracking.<br />
+          - Developed and maintained an informational website using React, CSS, & more.<br />
+          - Developed and maintained application for freelance animal care, including scheduling, invoicing, pet data management, and finance tracking.<br />
           - Expanded client base through effective networking and social media marketing<br />
           - Managed scheduling, invoicing, and client communications<br />
         </JobDescription>
@@ -109,7 +109,7 @@ const CombinedModal = ({ closeModal }) => {
         <br />
         <SectionTitle>Skills</SectionTitle>
         <JobDescription>
-          - Proficient in HTML, CSS, JavaScript, React, and Ruby on Rails<br />
+          - Proficient in HTML, CSS, JavaScript, React, Ruby on Rails, & more<br />
           - Strong communication and interpersonal skills<br />
           - Detail-oriented with excellent organizational abilities<br />
           - Adaptable and quick learner<br />
@@ -119,6 +119,7 @@ const CombinedModal = ({ closeModal }) => {
         <SectionTitle>Education</SectionTitle>
         <JobDescription>
           - Flatiron School Software Development Program, 2023 Graduate<br />
+          - AWS Cloud Practitioner Certificate, January 2024<br />
           - Real Estate License, New York Real Estate Institute<br />
           - Continuing Education Credits, Prospect Park Zoo (Wildlife Conservation Society)<br />
         </JobDescription>
