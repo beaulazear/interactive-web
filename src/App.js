@@ -5,20 +5,28 @@ import img1 from './images/img1.jpeg';
 import img2 from './images/img2.jpg';
 import img3 from './images/img3.jpg';
 import img4 from './images/img4.jpg';
+import Github from './images/Github.jpg';
+import Linkedin from './images/Linkedin.jpg';
 import Modal1 from './Modal1';
 import Modal2 from './Modal2';
 import Modal3 from './Modal3';
 import Modal4 from './Modal4';
 
 function App() {
-  const [headerName, setHeaderName] = useState('Beau Lazear');
+  const [headerName, setHeaderName] = useState('beauLazear');
   const [isModal1Open, setIsModal1Open] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
   const [isModal3Open, setIsModal3Open] = useState(false);
   const [isModal4Open, setIsModal4Open] = useState(false);
   const [displayHome, setDisplayHome] = useState(true);
-  const [hovered, setHovered] = useState({ img1: false, img2: false, img3: false, img4: false });
-  const [clickState, setClickState] = useState({ img1: false, img2: false, img3: false, img4: false });
+  const [hovered, setHovered] = useState({ img1: false, img2: false, img3: false, img4: false, github: false, linkedin: false });
+  const [clickState, setClickState] = useState({ img1: false, img2: false, img3: false, img4: false, github: false, linkedin: false });
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    const touchScreenCheck = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    setIsTouchDevice(touchScreenCheck);
+  }, []);
 
   useEffect(() => {
     if (displayHome) {
@@ -34,21 +42,25 @@ function App() {
   };
 
   const handleMouseLeave = (img) => {
-    setHeaderName('Beau Lazear');
+    setHeaderName('beauLazear');
     setHovered((prev) => ({ ...prev, [img]: false }));
   };
 
   const handleImageClick = (img, name, openModal) => {
-    if (hovered[img] && clickState[img]) {
-      openModal();
-    } else {
-      handleMouseEnter(name, img);
-      setClickState((prev) => ({ ...prev, [img]: true }));
+    if (isTouchDevice) {
+      if (hovered[img] && clickState[img]) {
+        openModal();
+      } else {
+        handleMouseEnter(name, img);
+        setClickState((prev) => ({ ...prev, [img]: true }));
 
-      // Reset the click state after a delay to allow for double clicks
-      setTimeout(() => {
-        setClickState((prev) => ({ ...prev, [img]: false }));
-      }, 1000); // Adjust the delay as needed
+        // Reset the click state after a delay to allow for double clicks
+        setTimeout(() => {
+          setClickState((prev) => ({ ...prev, [img]: false }));
+        }, 1000); // Adjust the delay as needed
+      }
+    } else {
+      openModal();
     }
   };
 
@@ -72,13 +84,21 @@ function App() {
     setIsModal4Open(true);
   };
 
+  const openGithub = () => {
+    window.open('https://github.com/beaulazear', '_blank');
+  };
+
+  const openLinkedin = () => {
+    window.open('https://linkedin.com/in/beau-lazear/', '_blank');
+  };
+
   const closeModal = () => {
     setIsModal1Open(false);
     setIsModal2Open(false);
     setIsModal3Open(false);
     setIsModal4Open(false);
     setDisplayHome(true);
-    setHovered({ img1: false, img2: false, img3: false, img4: false });
+    setHovered({ img1: false, img2: false, img3: false, img4: false, github: false, linkedin: false });
   };
 
   return (
@@ -122,6 +142,22 @@ function App() {
               onMouseEnter={() => handleMouseEnter('resume', 'img4')}
               onMouseLeave={() => handleMouseLeave('img4')}
               onClick={() => handleImageClick('img4', 'resume', openModal4)}
+            />
+            <img
+              src={Github}
+              alt="github"
+              className="diamond-img"
+              onMouseEnter={() => handleMouseEnter('gitHub', 'github')}
+              onMouseLeave={() => handleMouseLeave('github')}
+              onClick={() => handleImageClick('github', 'gitHub', openGithub)}
+            />
+            <img
+              src={Linkedin}
+              alt="linkedin"
+              className="diamond-img"
+              onMouseEnter={() => handleMouseEnter('linkedIn', 'linkedin')}
+              onMouseLeave={() => handleMouseLeave('linkedin')}
+              onClick={() => handleImageClick('linkedin', 'linkedIn', openLinkedin)}
             />
           </div>
         </div>
