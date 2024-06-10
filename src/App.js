@@ -49,21 +49,17 @@ function App() {
   const handleImageClick = (img, name, openModal) => {
     if (isTouchDevice) {
       if (!clickState[img]) {
-        // Simulate hover behavior on the first tap
         handleMouseEnter(name, img);
         setClickState((prev) => ({ ...prev, [img]: true }));
 
-        // Set a timeout to reset the click state, hover state, and header after a short delay
         setTimeout(() => {
           setClickState((prev) => ({ ...prev, [img]: false }));
-        }, 3000); // Adjust the delay as needed
+        }, 3000);
       } else {
-        // If clickState is already true, perform the action immediately on double-tap
         openModal();
-        setClickState((prev) => ({ ...prev, [img]: false })); // Reset clickState
+        setClickState((prev) => ({ ...prev, [img]: false }));
       }
     } else {
-      // For non-touch devices, directly open the modal
       openModal();
     }
   };
