@@ -57,7 +57,7 @@ function App() {
         const timeoutId = setTimeout(() => {
           setClickState((prev) => ({ ...prev, [img]: false }));
           handleMouseLeave(img);
-        }, 5000); // Adjust the delay as needed
+        }, 1000); // Adjust the delay as needed
 
         // Store the timeout ID in a variable
         const timeoutMap = { [img]: timeoutId };
