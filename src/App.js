@@ -48,6 +48,11 @@ function App() {
 
   const handleImageClick = (img, name, openModal) => {
     if (isTouchDevice) {
+      openModal();
+    } else {
+      // Handle click logic for non-touch devices
+      // This part remains the same as your existing logic
+      // You might adjust it if needed
       if (hovered[img] && clickState[img]) {
         openModal();
       } else {
@@ -59,10 +64,9 @@ function App() {
           setClickState((prev) => ({ ...prev, [img]: false }));
         }, 1000); // Adjust the delay as needed
       }
-    } else {
-      openModal();
     }
   };
+
 
   const openModal1 = () => {
     setDisplayHome(false);
