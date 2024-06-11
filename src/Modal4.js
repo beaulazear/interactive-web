@@ -87,7 +87,7 @@ const CombinedModal = ({ closeModal }) => {
   return (
     <ModalContainer>
       <ModalContent>
-        <h1 style={{ fontSize: '28px', marginBottom: '20px', color: '#007BFF', textAlign: 'center' }}>Christian Beau Lazear</h1>
+        <h1 style={{ fontSize: '28px', marginBottom: '20px', color: '#007BFF', textAlign: 'center' }}>Beau Lazear</h1>
         <CloseButton onClick={closeModal}>Take Me Home 🏡</CloseButton>
         <StyledLink target="_blank" href={ResumePDF}>Download PDF Version</StyledLink>
         <SectionTitle>Professional Summary</SectionTitle>
