@@ -30,6 +30,7 @@ const ServiceCard = styled.div`
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
     margin-bottom: 30px;
     text-align: left;
 `;
@@ -99,7 +100,7 @@ const Programming = ({ closeModal }) => {
     return (
         <div>
             <WelcomeContainer ref={topElement}>
-                <h1>My Programming Portfolio</h1>
+                <h1>Software Development</h1>
                 <ActionButton onClick={closeModal}>Take Me Home 🏡</ActionButton>
                 <IntroContainer>
                     <IntroContent>
@@ -111,8 +112,7 @@ const Programming = ({ closeModal }) => {
                 <CardContainer>
                     <ServiceCard>
                         <CardTitle>Dog Walking Application</CardTitle>
-                        <CardDescription>A full-stack application for managing and tracking dog walking services.</CardDescription>
-                        <ButtonContainer>
+                        <CardDescription>A full-stack application developed using React for the front end, leveraging Ruby on Rails for the API backend, and employing a PostgreSQL (PSQL) database for data management. The application is deployed on the Render platform. AWS S3 is utilized for photo storage, while styling is achieved through the utilization of Bootstrap and styled-components libraries.</CardDescription>                        <ButtonContainer>
                             <ActionButton target="_blank" href="https://youtu.be/vGsZPkvNa5Y">video</ActionButton>
                             <ActionButton target="_blank" href="https://dog-walking-app.onrender.com">deployed</ActionButton>
                             <ActionButton target="_blank" href="https://github.com/beaulazear/dog-walking-app.git">repo</ActionButton>
@@ -120,8 +120,7 @@ const Programming = ({ closeModal }) => {
                     </ServiceCard>
                     <ServiceCard>
                         <CardTitle>Pokemon Guide</CardTitle>
-                        <CardDescription>A single page application built using React that sorts and displays data from pokeapi.co.</CardDescription>
-                        <ButtonContainer>
+                        <CardDescription>An intricately crafted single-page application engineered with React, leveraging the PokeAPI to dynamically sort and present data based on specific criteria and user requests.</CardDescription>                        <ButtonContainer>
                             <ActionButton target="_blank" href="https://beaulazear.github.io/pokemon/">deployed</ActionButton>
                             <ActionButton target="_blank" href="https://github.com/beaulazear/pokemon">repo</ActionButton>
                         </ButtonContainer>
@@ -136,8 +135,8 @@ const Programming = ({ closeModal }) => {
                     </ServiceCard>
                     <ServiceCard>
                         <CardTitle>Aria Design Consultants</CardTitle>
-                        <CardDescription>A single page application built for a client for marketing purposes using primarily React.</CardDescription>
-                        <ButtonContainer>
+
+                        <CardDescription>An interactive single-page application crafted using React, with styling handled efficiently through Styled Components and Bootstrap, designed specifically for marketing needs.</CardDescription>                        <ButtonContainer>
                             <ActionButton target="_blank" href="https://beaulazear.github.io/michael-personal-site/">deployed</ActionButton>
                             <ActionButton target="_blank" href="https://github.com/beaulazear/michael-personal-site.git">repo</ActionButton>
                         </ButtonContainer>
@@ -152,8 +151,7 @@ const Programming = ({ closeModal }) => {
                     </ServiceCard>
                     <ServiceCard>
                         <CardTitle>Pet Sitting Application</CardTitle>
-                        <CardDescription>A full stack application built with Ruby on Rails and React for managing pet sitting services.</CardDescription>
-                        {/* <div>
+                        <CardDescription>A comprehensive application developed using Ruby on Rails to serve as an API for PostgreSQL database, seamlessly integrated with React for efficient management of pet sitting services.</CardDescription>                        {/* <div>
                             <img src={PetSitGif3} alt="gif of this project" style={{ width: '100%', borderRadius: '10px', marginTop: '20px', marginBottom: '20px' }} />
                         </div> */}
                         <ButtonContainer>
