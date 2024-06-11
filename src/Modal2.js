@@ -23,52 +23,112 @@ const StyledContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1300px;
+    gap: 20px; /* Added gap for better spacing */
   }
 `;
 
-
-
 const StyledServiceCard = styled.div`
-  background-color: #ffc09f;
+  background-color: #fffbf3;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: calc(50% - 40px);
+  height: 560px; /* Set a fixed height for all cards */
+  display: flex; /* Ensure contents are aligned vertically */
+  flex-direction: column; /* Align contents vertically */
+  justify-content: space-between; /* Align contents vertically */
+  overflow: hidden; /* Hide any overflowing content */
 
   @media (max-width: 800px) {
-    width: 100%;
-    box-sizing: border-box;
+    width: calc(100% - 40px);
   }
 
-  /* Add these styles for larger screens */
-  @media (min-width: 801px) {
-    width: 600px;
-    box-sizing: border-box;
-    margin-left: 10px;
-    margin-right: 10px;
+  h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
-    }
+  h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const StyledServiceCardTesti = styled.div`
+  background-color: #fffbf3;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: calc(50% - 40px);
+  height: auto; /* Change fixed height to auto */
+  display: flex; /* Ensure contents are aligned vertically */
+  flex-direction: column; /* Align contents vertically */
+  overflow: hidden; /* Hide any overflowing content */
+
+  @media (max-width: 800px) {
+    width: calc(100% - 40px);
+  }
+
+  h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 `;
 
 const CloseButton = styled.button`
-  background-color: #007BFF;
+  background-color: #ff5722; /* Changed to a more vibrant color */
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px; /* Increased padding for better feel */
   border: none;
-  border-radius: 5px;
+  border-radius: 25px; /* More rounded corners */
   cursor: pointer;
   font-size: 1em;
   align-self: center;
   margin-bottom: 15px;
   margin-top: 5px;
+  transition: background-color 0.3s ease; /* Added transition for hover effect */
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #e64a19; /* Adjusted hover color to match new base color */
   }
 
   @media (max-width: 768px) {
-    padding: 8px 16px;
+    padding: 10px 20px; /* Adjusted padding for smaller screens */
     font-size: 0.9em;
   }
 `;
@@ -77,55 +137,50 @@ const welcomeMessageStyles = {
     backgroundColor: '#fff2eb',
     fontFamily: 'Helvetica, sans-serif',
     margin: '0 auto',
-    paddingBottom: '20px',
-    paddingRight: '20px',
-    paddingLeft: '20px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    paddingBottom: '25px', /* Increased padding for more space */
+    paddingRight: '25px',
+    paddingLeft: '25px',
+    borderRadius: '15px', /* Increased border radius */
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', /* Slightly increased shadow */
     textAlign: 'center',
 };
 
 const headingStyles = {
-    fontSize: '30px',
+    fontSize: '32px', /* Slightly increased font size */
     marginBottom: '20px',
     color: '#333',
-};
-
-
-const imageWrapper = {
-    width: '200px', // Increased width to 200px
-    height: '200px', // Increased height to 200px
-    margin: '0 auto 20px',
-    borderRadius: '50%',
-    overflow: 'hidden',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'
+    letterSpacing: '1px', /* Added letter spacing */
 };
 
 const image = {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    borderRadius: '50%'
+    borderRadius: '15px' /* Changed to match wrapper */
 };
 
 const h2Styles = {
     color: '#333',
     fontSize: '24px',
     marginBottom: '10px',
-    marginTop: '0px'
+    marginTop: '0px',
+    textTransform: 'uppercase', /* Added uppercase transformation */
+    letterSpacing: '1px', /* Added letter spacing */
 };
 
 const h3Styles = {
     color: '#555',
     fontSize: '18px',
-    textAlign: 'left'
+    textAlign: 'left',
+    marginBottom: '10px', /* Added bottom margin for spacing */
 };
 
 const pStyles = {
     color: '#777',
     fontSize: '18px',
     textAlign: 'left',
-    padding: '10px'
+    padding: '10px',
+    lineHeight: '1.6', /* Ensured consistent line height */
 };
 
 const StyledIntroduction = styled.div`
@@ -164,7 +219,26 @@ const Paragraph = styled.p`
   }
 `;
 
-const AnimalCareInfo = ({closeModal}) => {
+const ImageContainer = styled.div`
+    width: 240px;
+    height: 240px; /* Set the height to match the width */
+    margin: 0 auto; /* Center the container horizontally */
+    margin-bottom: 18px;
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 15px; /* Add border radius for rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+`;
+
+const Image = styled.img`
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 15px; /* Match the container's border radius */
+`;
+
+
+
+const AnimalCareInfo = ({ closeModal }) => {
 
     const topElement = useRef(null);
 
@@ -268,10 +342,10 @@ const AnimalCareInfo = ({closeModal}) => {
             </StyledContainer>
             <h2 style={headingStyles}>Client Testimonials</h2>
             <StyledContainer>
-                <StyledServiceCard>
-                    <div style={imageWrapper}>
-                        <img style={image} src={BeauAndRalph} alt="a dog named Ralph with Beau" />
-                    </div>
+                <StyledServiceCardTesti>
+                    <ImageContainer>
+                        <Image style={image} src={BeauAndRalph} alt="a dog named Ralph with Beau" />
+                    </ImageContainer>
                     <h2 style={h2Styles}>Julie and Ralph</h2>
                     <p style={pStyles}>Beau is the absolute best! Like many pet owners, my pup, Ralph, means the
                         world to me
@@ -284,11 +358,11 @@ const AnimalCareInfo = ({closeModal}) => {
                         few
                         treats.
                     </p>
-                </StyledServiceCard>
-                <StyledServiceCard>
-                    <div style={imageWrapper}>
-                        <img style={image} src={Ruth} alt="a dog named Ruth" />
-                    </div>
+                </StyledServiceCardTesti>
+                <StyledServiceCardTesti>
+                    <ImageContainer>
+                        <Image style={image} src={Ruth} alt="a dog named Ruth" />
+                    </ImageContainer>
                     <h2 style={h2Styles}>Anna + Anna and Ruthie</h2>
                     <p style={pStyles}>From the moment our Ruthie met Beau, she was in love. We say his name and her
                         tail
@@ -304,11 +378,11 @@ const AnimalCareInfo = ({closeModal}) => {
                         Beau
                         with higher praise and feel lucky that Ruthie gets to spend time with him.
                     </p>
-                </StyledServiceCard>
-                <StyledServiceCard>
-                    <div style={imageWrapper}>
-                        <img src={RiverWithBrick} alt="A dog named river" style={image} />
-                    </div>
+                </StyledServiceCardTesti>
+                <StyledServiceCardTesti>
+                    <ImageContainer>
+                        <Image src={RiverWithBrick} alt="A dog named river" style={image} />
+                    </ImageContainer>
                     <h2 style={h2Styles}>Vanessa and River</h2>
                     <p style={pStyles}>Admittedly, it's not easy for me to leave my pup, River, with anyone… except for
                         Beau. I
@@ -320,11 +394,11 @@ const AnimalCareInfo = ({closeModal}) => {
                         photographs!) after every walk. We are incredibly grateful that we found Beau and could not possibly
                         recommend
                         him more!</p>
-                </StyledServiceCard>
-                <StyledServiceCard>
-                    <div style={imageWrapper}>
-                        <img src={JavaLookinCute} alt="a dog named Java" style={image} />
-                    </div>
+                </StyledServiceCardTesti>
+                <StyledServiceCardTesti>
+                    <ImageContainer>
+                        <Image src={JavaLookinCute} alt="a dog named Java" style={image} />
+                    </ImageContainer>
                     <h2 style={h2Styles}>Jaimee and Java</h2>
                     <p style={pStyles}>I can't recommend Beau enough. Above all, he values each pet's safety and
                         comfort.
@@ -336,11 +410,11 @@ const AnimalCareInfo = ({closeModal}) => {
                         consistently excited to see him. Beau took time to get to know Java and we are so grateful to put her in
                         his
                         care.</p>
-                </StyledServiceCard>
-                <StyledServiceCard>
-                    <div style={imageWrapper}>
-                        <img src={MooseOnVerandah} alt="a dog named moose" style={image} />
-                    </div>
+                </StyledServiceCardTesti>
+                <StyledServiceCardTesti>
+                    <ImageContainer>
+                        <Image src={MooseOnVerandah} alt="a dog named moose" style={image} />
+                    </ImageContainer>
                     <h2 style={h2Styles}>Carolyn + Patrick and Moose</h2>
                     <p style={pStyles}>I highly recommend Beau as a dog walker and dog sitter. Beau has been regularly
                         walking
@@ -354,7 +428,7 @@ const AnimalCareInfo = ({closeModal}) => {
                         has always provided exceptional care during his stays. He
                         sends regular updates about walks / dog sits and provides awesome pictures with each update. I trust
                         Beau completely and am so grateful to have him as Moose's dog walker and dog sitter.</p>
-                </StyledServiceCard>
+                </StyledServiceCardTesti>
             </StyledContainer>
         </div>
     );

@@ -8,7 +8,7 @@ const ModalContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background for better focus */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,23 +17,23 @@ const ModalContainer = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background-color: #f5f5f5; /* Light gray for a professional touch */
-  padding: 30px;
-  border-radius: 20px; /* Soft edges for elegance */
-  max-width: 90%;
+  background-color: #ffffff; /* Pure white for a clean, professional look */
+  padding: 40px;
+  border-radius: 10px; /* Slightly sharper edges */
+  max-width: 80%;
   max-height: 90%;
   overflow-y: auto; /* Allow vertical scrolling */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 `;
 
 const CloseButton = styled.button`
   background-color: #007BFF;
   color: white;
-  padding: 15px 30px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 1.2em;
-  align-self: center;
+  font-size: 1.1em;
   margin-bottom: 20px;
   width: 100%;
 
@@ -42,29 +42,36 @@ const CloseButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    padding: 12px 24px;
+    padding: 8px 16px;
     font-size: 1em;
   }
 `;
 
-const SectionTitle = styled.h1`
-  font-size: 24px;
+const SectionTitle = styled.h2`
+  font-size: 22px;
   margin-top: 20px;
   margin-bottom: 15px;
-  color: #333;
+  color: #007BFF; /* Blue for titles */
+  border-bottom: 2px solid #007BFF; /* Underline for emphasis */
+  padding-bottom: 5px;
 `;
 
-const JobTitle = styled.h2`
+const JobTitle = styled.h3`
   font-size: 20px;
   margin-top: 15px;
   margin-bottom: 10px;
-  color: #444;
+  color: #333; /* Dark gray for job titles */
 `;
 
-const JobDescription = styled.p`
+const JobDescription = styled.ul`
   font-size: 16px;
   line-height: 1.6;
-  color: #666;
+  color: #555; /* Medium gray for descriptions */
+  padding-left: 20px; /* Indentation for list */
+`;
+
+const JobDetail = styled.li`
+  margin-bottom: 10px;
 `;
 
 const StyledLink = styled.a`
@@ -80,52 +87,51 @@ const CombinedModal = ({ closeModal }) => {
   return (
     <ModalContainer>
       <ModalContent>
-        <h1 style={{ fontSize: '25px', marginBottom: '20px', color: '#333', textAlign: 'center' }}>Christian "Beau" Lazear</h1>
+        <h1 style={{ fontSize: '28px', marginBottom: '20px', color: '#007BFF', textAlign: 'center' }}>Christian Beau Lazear</h1>
         <CloseButton onClick={closeModal}>Take Me Home 🏡</CloseButton>
-        <br />
         <StyledLink target="_blank" href={ResumePDF}>Download PDF Version</StyledLink>
-        <br /><br />
-        <h2 style={{ fontSize: '24px', color: '#333' }}>Animal Care Professional & Software Developer</h2>
+        <SectionTitle>Professional Summary</SectionTitle>
+        <JobDescription>
+          <JobDetail>Animal Care Professional & Software Developer with a strong background in veterinary assistance, zookeeping, and web development.</JobDetail>
+        </JobDescription>
         <SectionTitle>Experience</SectionTitle>
         <JobTitle>Freelance Animal Care, Self-Employed (2019-Present)</JobTitle>
         <JobDescription>
-          - Developed and maintained an informational website using React, CSS, & more.<br />
-          - Developed and maintained application for freelance animal care, including scheduling, invoicing, pet data management, and finance tracking.<br />
-          - Expanded client base through effective networking and social media marketing<br />
-          - Managed scheduling, invoicing, and client communications<br />
+          <JobDetail>Developed and maintained an informational website using React, CSS, & more.</JobDetail>
+          <JobDetail>Created an application for scheduling, invoicing, pet data management, and finance tracking.</JobDetail>
+          <JobDetail>Expanded client base through effective networking and social media marketing.</JobDetail>
+          <JobDetail>Managed scheduling, invoicing, and client communications.</JobDetail>
         </JobDescription>
         <JobTitle>Veterinary Assistant, ASPCA-ARC (Apr. 2019-Nov. 2019)</JobTitle>
         <JobDescription>
-          - Provided daily animal husbandry and medical support<br />
-          - Assisted veterinarians during procedures and managed medical paperwork<br />
-          - Promoted to lead vet assistant for proactive leadership during high employee turnover<br />
+          <JobDetail>Provided daily animal husbandry and medical support.</JobDetail>
+          <JobDetail>Assisted veterinarians during procedures and managed medical paperwork.</JobDetail>
+          <JobDetail>Promoted to lead vet assistant for proactive leadership during high employee turnover.</JobDetail>
         </JobDescription>
         <JobTitle>Zookeeper, Wildlife Conservation Society - Prospect Park Zoo (Sept. 2017-Feb. 2019)</JobTitle>
         <JobDescription>
-          - Completed internships and advanced to full-time zookeeper role<br />
-          - Executed animal husbandry, enrichment activities, and data recording<br />
-          - Collaborated with team members to optimize workflow and efficiency<br />
+          <JobDetail>Completed internships and advanced to full-time zookeeper role.</JobDetail>
+          <JobDetail>Executed animal husbandry, enrichment activities, and data recording.</JobDetail>
+          <JobDetail>Collaborated with team members to optimize workflow and efficiency.</JobDetail>
         </JobDescription>
-        <br />
         <SectionTitle>Skills</SectionTitle>
         <JobDescription>
-          - Proficient in HTML, CSS, JavaScript, React, Ruby on Rails, & more<br />
-          - Strong communication and interpersonal skills<br />
-          - Detail-oriented with excellent organizational abilities<br />
-          - Adaptable and quick learner<br />
-          - Passionate about environmental and social causes<br />
+          <JobDetail>Proficient in HTML, CSS, JavaScript, React, Ruby on Rails, & more.</JobDetail>
+          <JobDetail>Strong communication and interpersonal skills.</JobDetail>
+          <JobDetail>Detail-oriented with excellent organizational abilities.</JobDetail>
+          <JobDetail>Adaptable and quick learner.</JobDetail>
+          <JobDetail>Passionate about environmental and social causes.</JobDetail>
         </JobDescription>
-        <br />
         <SectionTitle>Education</SectionTitle>
         <JobDescription>
-          - Flatiron School Software Development Program, 2023 Graduate<br />
-          - AWS Cloud Practitioner Certificate, January 2024<br />
-          - Real Estate License, New York Real Estate Institute<br />
-          - Continuing Education Credits, Prospect Park Zoo (Wildlife Conservation Society)<br />
+          <JobDetail>Flatiron School Software Development Program, 2023 Graduate.</JobDetail>
+          <JobDetail>AWS Cloud Practitioner Certificate, January 2024.</JobDetail>
+          <JobDetail>Real Estate License, New York Real Estate Institute.</JobDetail>
+          <JobDetail>Continuing Education Credits, Prospect Park Zoo (Wildlife Conservation Society).</JobDetail>
         </JobDescription>
       </ModalContent>
     </ModalContainer>
-  )
-}
+  );
+};
 
 export default CombinedModal;
