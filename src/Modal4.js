@@ -18,7 +18,7 @@ const ModalContainer = styled.div`
 
 const ModalContent = styled.div`
   background-color: #ffffff; /* Pure white for a clean, professional look */
-  padding: 40px;
+  padding: 20px;
   border-radius: 10px; /* Slightly sharper edges */
   max-width: 80%;
   max-height: 90%;
