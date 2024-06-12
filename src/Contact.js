@@ -14,7 +14,7 @@ const StyledContactContainer = styled.div`
 const StyledFormContainer = styled.form`
   width: 90%;
   max-width: 500px;
-  padding: 40px;
+  padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -57,7 +57,7 @@ const StyledButtonContainer = styled.div`
 const StyledButton = styled.button`
   flex: 1;
   margin: 0 10px;
-  padding: 15px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -145,12 +145,12 @@ export default function Contact({ closeModal }) {
     return (
         <StyledContactContainer id="clouds-background">
             <StyledFormContainer ref={form} onSubmit={sendEmail}>
-                <SubHeading>Email Beau 💞</SubHeading>
-                <Paragraph>Send an email describing your inquiry! I will be in touch shortly :)</Paragraph>
+                <SubHeading>Contact Me 💞</SubHeading>
+                <Paragraph>Send an email describing your inquiry and I will be in touch shortly.</Paragraph>
                 <StyledLabel>Name</StyledLabel>
-                <StyledInput placeholder="Your preferred name." type="text" name="from_name" />
+                <StyledInput placeholder="Your preferred name" type="text" name="from_name" />
                 <StyledLabel>Email</StyledLabel>
-                <StyledInput placeholder="Your email address so I can respond." type="email" name="from_email" />
+                <StyledInput placeholder="Your email address" type="email" name="from_email" />
                 <StyledLabel>Message</StyledLabel>
                 <StyledTextarea placeholder="Tell me about yourself / desired services!" name="message" />
                 <StyledButtonContainer>
