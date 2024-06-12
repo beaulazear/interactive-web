@@ -5,12 +5,14 @@ import img1 from './images/img1.jpeg';
 import img2 from './images/img2.jpg';
 import img3 from './images/img3.jpg';
 import img4 from './images/img4.jpg';
+import mailImage from './images/mail.jpg'; // Import your mail image
 import Github from './images/Github.jpg';
 import Linkedin from './images/Linkedin.jpg';
 import Modal1 from './Modal1';
 import Modal2 from './Modal2';
 import Modal3 from './Modal3';
 import Modal4 from './Modal4';
+import Contact from './Contact'; // Import the Contact component
 
 function App() {
   const [headerName, setHeaderName] = useState('beauLazear');
@@ -18,9 +20,10 @@ function App() {
   const [isModal2Open, setIsModal2Open] = useState(false);
   const [isModal3Open, setIsModal3Open] = useState(false);
   const [isModal4Open, setIsModal4Open] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [displayHome, setDisplayHome] = useState(true);
-  const [hovered, setHovered] = useState({ img1: false, img2: false, img3: false, img4: false, github: false, linkedin: false });
-  const [clickState, setClickState] = useState({ img1: false, img2: false, img3: false, img4: false, github: false, linkedin: false });
+  const [hovered, setHovered] = useState({ img1: false, img2: false, img3: false, img4: false, github: false, linkedin: false, mail: false });
+  const [clickState, setClickState] = useState({ img1: false, img2: false, img3: false, img4: false, github: false, linkedin: false, mail: false });
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
@@ -35,6 +38,11 @@ function App() {
       });
     }
   }, [displayHome]);
+
+  const openContact = () => {
+    setDisplayHome(false);
+    setIsContactOpen(true); // Open the contact modal
+  };
 
   const handleMouseEnter = (name, img) => {
     setHeaderName(name);
@@ -91,12 +99,12 @@ function App() {
   const openLinkedin = () => {
     window.open('https://linkedin.com/in/beau-lazear/', '_blank');
   };
-
   const closeModal = () => {
     setIsModal1Open(false);
     setIsModal2Open(false);
     setIsModal3Open(false);
     setIsModal4Open(false);
+    setIsContactOpen(false); // Corrected line
     setDisplayHome(true);
     setHovered({ img1: false, img2: false, img3: false, img4: false, github: false, linkedin: false });
   };
@@ -159,6 +167,14 @@ function App() {
               onMouseLeave={() => handleMouseLeave('linkedin')}
               onClick={() => handleImageClick('linkedin', 'linkedIn', openLinkedin)}
             />
+            <img
+              src={mailImage} // Add the source for your mail image
+              alt="mail" // Add an appropriate alt text
+              className={`diamond-img ${hovered.mail ? 'hovered' : ''}`} // Apply any necessary classes and add hover effect
+              onMouseEnter={() => handleMouseEnter('emailMe', 'mail')} // Handle mouse enter event
+              onMouseLeave={() => handleMouseLeave('mail')} // Handle mouse leave event
+              onClick={() => handleImageClick('mail', 'mail', openContact)} // Handle click event
+            />
           </div>
         </div>
       )}
@@ -166,6 +182,7 @@ function App() {
       {isModal2Open && <Modal2 closeModal={closeModal} />}
       {isModal3Open && <Modal3 closeModal={closeModal} />}
       {isModal4Open && <Modal4 closeModal={closeModal} />}
+      {isContactOpen && <Contact closeModal={closeModal} />}
     </div>
   );
 }
