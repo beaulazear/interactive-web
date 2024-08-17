@@ -271,7 +271,7 @@ const AnimalCareInfo = ({ closeModal }) => {
                         $50 - 120 minute walk<br />
                     </h3>
                     <p style={pStyles}>
-                        - Add $5 if additional Dog (same household)<br />
+                        - Add $10 if additional Dog (same household)<br />
                         - Add $5 for solo walk (behavioral, senior citizen)<br />
                         - Add $5 if earlier than 10am / later than 5pm<br />
                         <br />
@@ -282,16 +282,15 @@ const AnimalCareInfo = ({ closeModal }) => {
                 </StyledServiceCard>
                 <StyledServiceCard>
                     <h2 style={h2Styles}>Pet sitting</h2>
-                    <h3 style={h3Styles}>$85 - Overnight pet sitting, includes:</h3>
+                    <h3 style={h3Styles}>$95 - Overnight pet sitting, includes:</h3>
                     <p style={pStyles}>
                         - Morning walk + breakfast (7-10am)<br />
                         - Evening walk + dinner (4-6pm)<br />
                         - Bedtime walk (8-11pm)<br />
                         <br />
-                        - Extra $10 if 4th mid day walk is required<br />
-                        - Add $10 if additional dog in household<br />
-                        - Add $10 if cat care is required (litter, feeding, water, etc)<br />
-                        - Add $10 to make every walk 45 minutes
+                        - Extra $15 if 4th mid day walk is required<br />
+                        - Add $25 if additional dog in household<br />
+                        - Add $15 if cat care is required (litter, feeding, water, etc)<br />
                         <br />
                         <br />
                         Photo updates and description of service provided sent via text or email.
