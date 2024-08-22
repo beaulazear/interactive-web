@@ -261,7 +261,7 @@ const AnimalCareInfo = ({ closeModal }) => {
             </StyledIntroduction>
             <h2 style={headingStyles}>Services and Pricing</h2>
             <StyledContainer>
-                <StyledServiceCard>
+                <StyledServiceCardTesti>
                     <h2 style={h2Styles}>Dog walks</h2>
                     <h3 style={h3Styles}>
                         $22 - 30 minute walk<br />
@@ -279,8 +279,8 @@ const AnimalCareInfo = ({ closeModal }) => {
                         <br />
                         Photo updates and description of service provided sent via text or email.
                     </p>
-                </StyledServiceCard>
-                <StyledServiceCard>
+                </StyledServiceCardTesti>
+                <StyledServiceCardTesti>
                     <h2 style={h2Styles}>Pet sitting</h2>
                     <h3 style={h3Styles}>$95 - Overnight pet sitting, includes:</h3>
                     <p style={pStyles}>
@@ -295,8 +295,8 @@ const AnimalCareInfo = ({ closeModal }) => {
                         <br />
                         Photo updates and description of service provided sent via text or email.
                     </p>
-                </StyledServiceCard>
-                <StyledServiceCard>
+                </StyledServiceCardTesti>
+                <StyledServiceCardTesti>
                     <h2 style={h2Styles}>Cat visits</h2>
                     <h3 style={h3Styles}>
                         $25 - one visit (approximately 30 minutes)<br />
@@ -311,8 +311,8 @@ const AnimalCareInfo = ({ closeModal }) => {
                         <br />
                         Photo updates and description of service provided sent via text or email.
                     </p>
-                </StyledServiceCard>
-                <StyledServiceCard>
+                </StyledServiceCardTesti>
+                <StyledServiceCardTesti>
                     <h2 style={h2Styles}>Exotic animal care</h2>
                     <h3 style={h3Styles}>$30 - one visit (approximately 30 minutes)</h3>
                     <p style={pStyles}>
@@ -324,8 +324,8 @@ const AnimalCareInfo = ({ closeModal }) => {
                         <br />
                         Photo updates and description of service provided sent via text or email.
                     </p>
-                </StyledServiceCard>
-                <StyledServiceCard>
+                </StyledServiceCardTesti>
+                <StyledServiceCardTesti>
                     <h2 style={h2Styles}>Euthanasia support</h2>
                     <h3 style={h3Styles}>Free of charge :)</h3>
                     <p style={pStyles}>
@@ -337,7 +337,7 @@ const AnimalCareInfo = ({ closeModal }) => {
                         <br />
                         "To live in hearts we leave behind is not to die" -Thomas Campbell
                     </p>
-                </StyledServiceCard>
+                </StyledServiceCardTesti>
             </StyledContainer>
             <h2 style={headingStyles}>Client Testimonials</h2>
             <StyledContainer>
